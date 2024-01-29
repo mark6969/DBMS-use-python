@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DBMS</title>
+</head>
+<body>
+    <h1>DBMS - {{ database }}</h1>
+
+    <h2>Tables:</h2>
+    <ul>
+        <table>
+            <tr>
+                <th>姓名</th>
+                <th>年齡</th>
+                <th>性別</th>
+            </tr>
+            {% for user in users %}
+            <tr>
+                <td>{{ user.name }}</td>
+                <td>{{ user.age }}</td>
+                <td>{{ user.sex }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DBMS</title>
+</head>
+<body>
+    <h1>DBMS - {{ database }}</h1>
+
+    <h2>Tables:</h2>
+    <ul>
+        <table>
+            <tr>
+                {% for key in keys %}
+                <th>{{ key }}</th>
+                {% endfor %}
+            </tr>
+            {% for table in tables %}
+            <tr>
+                {% for key in keys %}
+                <td>{{ table.key }}</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </table>
+    </ul>
+</body>
+</html>

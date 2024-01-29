@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DBMS</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+        }
+        .right-text {
+            float: right; /* 將文字容器浮動到右側 */
+            margin-left: 20px; /* 提供一些間距 */
+        }
+    </style>
+</head>
+<body>
+    <h1>DBMS - DEMO</h1>
+    <form method="POST" action="/">
+        <label for="command">Command:</label>
+        <input type="text" name="command" id="command" required>
+        <br><br>
+        <input type="submit" value="Execute">
+    </form>
+    <div class="right-text">
+        <h2>額外文字</h2>
+        <p>這裡是右方額外的文字內容。</p>
+    </div>
+    
+    <!-- <h2>Users:</h2>
+    <table>
+        <tr>
+            <th>姓名</th>
+            <th>年齡</th>
+            <th>性別</th>
+        </tr>
+        {% for user in users %}
+        <tr>
+            <td>{{ user.name }}</td>
+            <td>{{ user.age }}</td>
+            <td>{{ user.sex }}</td>
+        </tr>
+        {% endfor %}
+    </table> -->
+    
+    <h2>Results:</h2>
+    <ul>
+        {% for result in results %}
+        <li>{{ result }}</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Tables:</h2>
+    <ul>
+    {% for table in tables %}
+    <li><a href="/table/{{ table }}">{{ table }}</a></li>
+    {% endfor %}
+    </ul>
+
+</body>
+</html>

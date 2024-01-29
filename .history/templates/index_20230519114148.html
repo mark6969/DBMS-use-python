@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DBMS</title>
+</head>
+<body>
+    <h1>DBMS - User Management</h1>
+    <form method="POST" action="/">
+        <label for="command">Command:</label>
+        <input type="text" name="command" id="command" required>
+        <br><br>
+        <input type="submit" value="Execute">
+    </form>
+    
+    <h2>Users:</h2>
+    <ul>
+        <li>姓名 - 年齡 - 性別</li>
+        {% for user in users %}
+        <li>{{ user.name }} - {{ user.age }} - {{ user.sex }}</li>
+        {% endfor %}
+    </ul>
+    
+    <h2>Results:</h2>
+    <ul>
+        {% for result in results %}
+        <li>{{ result }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
